@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  web:
+    build: ./internet
+    image: mocsctf/systeminternet
+    restart: always
+    ports:
+      - "8018:80"
+  intranet:
+    build: ./intranet/

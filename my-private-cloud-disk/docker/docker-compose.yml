@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  web:
+    build: .
+    image: mocsctf/disk
+    restart: always
+    ports:
+      - "8007:80"

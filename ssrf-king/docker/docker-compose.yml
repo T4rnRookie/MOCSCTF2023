@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  web:
+    build: ./
+    volumes:
+      - ./app/:/app/:ro
+      - ./start.sh:/start.sh:ro
+      - ./flag:/macao/fl3g_1s_th1s_Good_j0b:ro
+      - ./nginx.conf:/etc/nginx/sites-available/default:ro
+    ports:
+      - 8098:80/tcp
